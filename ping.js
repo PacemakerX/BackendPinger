@@ -1,6 +1,8 @@
 const axios = require("axios");
+const dotenv = require("dotenv");
+dotenv.config(); // Load environment variables from .env file
 
-const URL = "https://your-backend-url.onrender.com"; // Replace with your backend URL
+const URL = process.env.BACKEND_URL; // Replace with your backend URL
 
 async function pingServer() {
   try {
